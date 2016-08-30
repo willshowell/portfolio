@@ -9,7 +9,7 @@
   height: 200px;
 }
 .profile {
-  background-image: url('../img/profile.jpg');
+  background-image: url('../images/profile.jpg');
   background-size: 100% 100%;
   /*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/  
   transition: all 0.12s ease-in-out;
@@ -29,7 +29,7 @@
   margin-right: 30px;
 }
 .mvmt {
-  background-image: url('../img/mvmt.png');
+  background-image: url('../images/mvmt.png');
 }
 .project-image {
   position: relative;
@@ -46,52 +46,52 @@
   display: inline-block;
 }
 #outerwear1 {
-  background-image: url('../img/outerwear1.jpg');
+  background-image: url('../images/outerwear1.jpg');
 }
 #outerwear2 {
-  background-image: url('../img/outerwear2.jpg');
+  background-image: url('../images/outerwear2.jpg');
 }
 #outerwear3 {
-  background-image: url('../img/outerwear3.jpg');
+  background-image: url('../images/outerwear3.jpg');
 }
 #outerwear4 {
-  background-image: url('../img/outerwear4.jpg');
+  background-image: url('../images/outerwear4.jpg');
 }
 #outerwear5 {
-  background-image: url('../img/outerwear5.jpg');
+  background-image: url('../images/outerwear5.jpg');
 }
 #outerwear6 {
-  background-image: url('../img/outerwear6.png');
+  background-image: url('../images/outerwear6.png');
 }
 #scl1 {
-  background-image: url('../img/scl1.png');
+  background-image: url('../images/scl1.png');
 }
 #scl2 {
-  background-image: url('../img/scl2.png');
+  background-image: url('../images/scl2.png');
 }
 #scl3 {
-  background-image: url('../img/scl3.png');
+  background-image: url('../images/scl3.png');
 }
 #pa1 {
-  background-image: url('../img/pa1.png');
+  background-image: url('../images/pa1.png');
 }
 #pa2 {
-  background-image: url('../img/pa2.png');
+  background-image: url('../images/pa2.png');
 }
 #mvmt {
-  background-image: url('../img/mvmt.png');
+  background-image: url('../images/mvmt.png');
 }
 #ncsu {
-  background-image: url('../img/ncsu.jpg');
+  background-image: url('../images/ncsu.jpg');
 }
 #d5 {
-  background-image: url('../img/d5.png');
+  background-image: url('../images/d5.png');
 }
 #mcdean {
-  background-image: url('../img/mcdean.png');
+  background-image: url('../images/mcdean.png');
 }
 #signalscape {
-  background-image: url('../img/signalscape.png');
+  background-image: url('../images/signalscape.png');
 }
 
 
