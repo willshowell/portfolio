@@ -1,0 +1,254 @@
+/* Organization */
+
+
+/* image block stuff */
+.image {
+  border-radius: 0;
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+}
+.profile {
+  background-image: url('../img/profile.jpg');
+  background-size: 100% 100%;
+  /*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/  
+  transition: all 0.12s ease-in-out;
+}
+.thumb {
+  width: 98px;
+  height: 98px;
+  margin-top: 30px;
+  background-size: 100% 100%;
+}
+.animated-image:hover {
+  background-size: 20% 20%;
+  background-position: 80px 80px;
+}
+.profile-inline {
+  display: inline-block;
+  margin-right: 30px;
+}
+.mvmt {
+  background-image: url('../img/mvmt.png');
+}
+.project-image {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-size: 100% 100%;
+  display: inline-block;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+.experience-logo {
+  width: 48px;
+  height: 48px;
+  background-size: 100% 100%;
+  display: inline-block;
+}
+#outerwear1 {
+  background-image: url('../img/outerwear1.jpg');
+}
+#outerwear2 {
+  background-image: url('../img/outerwear2.jpg');
+}
+#outerwear3 {
+  background-image: url('../img/outerwear3.jpg');
+}
+#outerwear4 {
+  background-image: url('../img/outerwear4.jpg');
+}
+#outerwear5 {
+  background-image: url('../img/outerwear5.jpg');
+}
+#outerwear6 {
+  background-image: url('../img/outerwear6.png');
+}
+#scl1 {
+  background-image: url('../img/scl1.png');
+}
+#scl2 {
+  background-image: url('../img/scl2.png');
+}
+#scl3 {
+  background-image: url('../img/scl3.png');
+}
+#pa1 {
+  background-image: url('../img/pa1.png');
+}
+#pa2 {
+  background-image: url('../img/pa2.png');
+}
+#mvmt {
+  background-image: url('../img/mvmt.png');
+}
+#ncsu {
+  background-image: url('../img/ncsu.jpg');
+}
+#d5 {
+  background-image: url('../img/d5.png');
+}
+#mcdean {
+  background-image: url('../img/mcdean.png');
+}
+#signalscape {
+  background-image: url('../img/signalscape.png');
+}
+
+
+/* section spacing stuff */
+.major {
+  padding-top: 50px;
+}
+
+.first {
+  border-top: 1px solid #f8f8f8;
+  padding-top: 40px;
+}
+.header {
+  margin: 40px auto;
+}
+.footer {
+  margin: 40px auto;
+  text-align: center;
+}
+.title-inline {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 30px;
+}
+.experience-inline {
+  display: inline-block;
+  position: relative;
+  top: -5px;
+  left: 10px;
+}
+
+/* links and whatnot */
+.social {
+  padding: 0px;
+  margin: 0px 10px;
+  color: #333;
+}
+.nav-link {
+  font-weight: 300;
+  color: #888;
+  font-size: 11px;
+  padding: 10px;
+}
+.nav-link:hover {
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #008BD6;
+}
+
+/* fonty fonts */
+h1, h2, h3, h4 {
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+h1 {
+  font-size: 19px;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+h2 {
+  font-size: 19px;
+  line-height: 1.7;
+  letter-spacing: 2px;
+}
+h3 {
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+h4{
+  font-size: 13px;
+  line-height: 1.6;
+  letter-spacing: 3px;
+}
+p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #333;
+  font-weight: 300;
+  font-family: 'Open Sans';
+  letter-spacing: 1px;
+  padding-top: 16px;
+  margin: 0;
+}
+.italics {
+  font-style: italic;
+}
+
+/* page layout business */
+.main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.no-scroll {
+  overflow: hidden;
+}
+#footer-spacer {
+  height: 20px;
+}
+
+/* splash page specifics */
+#particles-js {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#box {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #333;
+  background-color: #fff; 
+  opacity: 0.88;
+}
+#name {
+  position: absolute;
+  top: 15px;
+  left: -21px;
+  background-color: #fff;
+  padding:2px;
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 8px;
+  font-weight: 300;
+  text-align: left;
+}
+#enter {
+  position: absolute;
+  bottom:5px;
+  right: 5px;
+  color: #333;
+  font-size: 9px;
+}
+
+/* other */
+#and {
+  font-size: 90%;
+  font-weight: 300;
+}
+.date {
+  font-weight: 300;
+  font-size: 10px;
+}
+

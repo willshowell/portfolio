@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Will Howell</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'portfolio/css/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'portfolio/css/custom.css' %}">
+  <link rel="stylesheet" href="{% static 'portfolio/css/themify-icons.css' %}">
+  <link rel="shortcut icon" href="{% static 'portfolio/images/favicon.png' %}">
+</head>
+<body>
+  <div class="main">
+    {% include 'portfolio/partials/header.html' %}
+
+    {% block body %}
+    {% endblock %}
+
+    {% include 'portfolio/partials/footer.html' %}
+  </div>
+</body>
+</html>

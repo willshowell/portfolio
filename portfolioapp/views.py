@@ -1,7 +1,7 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 def home(request):
-    return HttpResponse("Welcome to Will Howell's portfolio.")
+    return render(request, 'portfolio/home.html')
 
 def experience(request):
-    return HttpResponse("Here's a list of all my experience.")
+    return render(request, 'portfolio/experience.html')
