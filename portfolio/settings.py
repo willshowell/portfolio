@@ -122,9 +122,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # Include machine-specific settings
 try:
-    print("Trying to import local settings")
     from .localsettings import *
-    print("Successfully imported local settings")
 except ImportError as e:
     print("Unabled to import localsettings")
     print(e)
