@@ -1,4 +1,7 @@
 from django.http import HttpResponse
 
-def index(request):
-    return HttpResponse("You're at Will Howell's portfolio index.")
+def home(request):
+    return HttpResponse("Welcome to Will Howell's portfolio.")
+
+def experience(request):
+    return HttpResponse("Here's a list of all my experience.")
