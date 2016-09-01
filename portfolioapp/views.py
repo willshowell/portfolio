@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404, render
-from .models import Project, Experience
+from .models import Project, Experience, About
 
 def home(request):
     projects = Project.objects.all()
@@ -10,7 +10,8 @@ def experience(request):
     return render(request, 'portfolio/experience.html', {'experiences': experiences})
 
 def about(request):
-    return render(request, 'portfolio/about.html')
+    about = About.objects.get()
+    return render(request, 'portfolio/about.html', {'about': about })
 
 def project_detail(request, project_id):
     project = get_object_or_404(Project, pk=project_id)
