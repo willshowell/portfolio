@@ -1,4 +1,11 @@
 from django.db import models
+from django.core.exceptions import ValidationError
+
+def validate_only_one_instance(obj):
+    model = obj.__class__
+    if (model.objects.count() > 0 and
+            obj.id != model.objects.get().id):
+        raise ValidationError("Can only create 1 {} instance".format(model.__name__))
 
 
 class Project(models.Model):
@@ -52,3 +59,20 @@ class Experience(models.Model):
 
     def __str__(self):
         return self.location
+
+
+class About(models.Model):
+    description = models.TextField(
+        blank=True,
+        null=True
+        )
+    
+    def clean(self):
+        validate_only_one_instance(self)
+        
+    def __str__(self):
+        return "About"
+        
+    class Meta:
+        verbose_name = "about description"
+        verbose_name_plural = "about"
