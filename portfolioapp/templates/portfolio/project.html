@@ -1,22 +1,22 @@
 {% extends 'portfolio/partials/base_page.html' %}
 
 {% block page_content %}
-<header>
-  <div class="title">
-    <h3>{{ project.title }}</h3>
-  </div>
-  <h5>{{ project.tagline }}</h5>
-</header>
-
 <article>
-	{% if project.source_url %}
-	<p><a href="{{ project.source_url }}">Source code ></a></p>
-	{% endif %}
-	
+	<h3>{{ project.title }}</h3>
+  <h5>{{ project.tagline }}</h5>
+
 	{% if project.project_url %}
-	<p><a href="{{ prroject.project_url }}">Check it out ></a></p>
+	<a class="button live-button" onMouseOver="this.style.backgroundColor='{{ project.background_color }}'" 
+	onMouseOut="this.style.backgroundColor='#bbb'" href="{{ project.project_url }}">Check it out!</a>
 	{% endif %}
 	
+	{% if project.source_url %}
+	<a class="button source-button" onMouseOver="this.style.backgroundColor='{{ project.background_color }}'" 
+	onMouseOut="this.style.backgroundColor='#bbb'" href="{{ project.source_url }}">Source code</a>
+	{% endif %}
+
+</article>
+<article>
 	{% if project.description %}
   <p>{{ project.description|safe|linebreaksbr }}</p>
 	{% endif %}

@@ -128,7 +128,6 @@ footer {
   background-position: center;
   background-size: 100px;
   height: 128px;
-
   border-radius: 6px;
 }
 .project-section {
@@ -141,6 +140,35 @@ footer {
 }
 .col-right {
   float: right;
+}
+a.button {
+  background-color: #bbb;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  padding: 8px 8px;
+  width: 160px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 0px;
+  margin-right: 8px;
+  cursor: pointer;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+a.button:hover {
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 
 /*
