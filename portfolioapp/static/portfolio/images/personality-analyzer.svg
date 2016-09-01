@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="180px" height="180px" viewBox="0 0 180 180" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M54,53.9945832 C54,51.7884358 55.7890275,50 58.0042577,50 L81.9957423,50 C84.2072328,50 86,51.7830797 86,53.9945832 L86,126.005417 C86,128.211564 84.2109725,130 81.9957423,130 L58.0042577,130 C55.7927672,130 54,128.21692 54,126.005417 L54,53.9945832 Z M94,86.0098932 C94,83.7952903 95.7890275,82 98.0042577,82 L121.995742,82 C124.207233,82 126,83.7940525 126,86.0098932 L126,125.990107 C126,128.20471 124.210972,130 121.995742,130 L98.0042577,130 C95.7927672,130 94,128.205948 94,125.990107 L94,86.0098932 Z M134,113.99923 C134,111.790516 135.789028,110 138.004258,110 L161.995742,110 C164.207233,110 166,111.792468 166,113.99923 L166,126.00077 C166,128.209484 164.210972,130 161.995742,130 L138.004258,130 C135.792767,130 134,128.207532 134,126.00077 L134,113.99923 Z M14,102.004258 C14,99.7927672 15.7890275,98 18.0042577,98 L41.9957423,98 C44.2072328,98 46,99.7890275 46,102.004258 L46,125.995742 C46,128.207233 44.2109725,130 41.9957423,130 L18.0042577,130 C15.7927672,130 14,128.210972 14,125.995742 L14,102.004258 Z" id="path-1"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Portfolio-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Personality-Analyzer">
+            <g id="Combined-Shape">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
