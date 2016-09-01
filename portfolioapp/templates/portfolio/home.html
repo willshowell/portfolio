@@ -17,8 +17,10 @@
     <section class="project-section col-{% if forloop.counter0|divisibleby:2 %}left{% else %}right{% endif %}">
       <a href="{% url 'project_detail' project.id %}">
         <div id="" class="project" style="{% if project.background_image %}
+        {% load static %}
         background-image: url('{{ project.background_image }}');
-        {% elif project.background_color %}
+        {% endif %}
+        {% if project.background_color %}
         background-color: {{ project.background_color }};
         {% endif %}
         ">
