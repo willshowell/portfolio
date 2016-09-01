@@ -20,6 +20,16 @@ class Project(models.Model):
         blank=True,
         null=True
         )
+    background_image = models.CharField(
+        max_length=200,
+        blank=True,
+        null=True
+        )
+    background_color = models.CharField(
+        max_length=100,
+        blank=True,
+        null=True
+        )
 
     def __str__(self):
         return self.title

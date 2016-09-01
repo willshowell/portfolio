@@ -18,7 +18,12 @@
     	{% for project in projects %}
 	    <section class="project-section col-{% if forloop.counter0|divisibleby:2 %}left{% else %}right{% endif %}">
 	      <a href="#">
-	        <div id="" class="project">
+	        <div id="" class="project" style="{% if project.background_image %}
+          background-image: url('{{ project.background_image }}');
+          {% elif project.background_color %}
+          background-color: {{ project.background_color }};
+          {% endif %}
+          ">
 	        </div>
 	        <h5>{{ project.title }}</h5>
 	      </a>
