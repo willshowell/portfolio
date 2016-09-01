@@ -6,7 +6,7 @@ def home(request):
     return render(request, 'portfolio/home.html', {'projects': projects}) 
 
 def experience(request):
-    experiences = Experience.objects.all()
+    experiences = Experience.objects.all().order_by('-start_date')
     return render(request, 'portfolio/experience.html', {'experiences': experiences})
 
 def about(request):
