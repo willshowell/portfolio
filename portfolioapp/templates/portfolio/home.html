@@ -3,13 +3,12 @@
 {% block page_content %}
 <header class="pos-bottom">
   <div class="title">
-    <h1>Will</h1>
-    <h1>Howell</h1>
+    <h1>Will Howell</h1>
   </div>
   <h4>Engineer <span class="ultralight">|</span> Raleigh</h4>
 </header>
 
-<article class="projects">
+<section class="projects">
   <h3 id="projects-header">Projects</h3>
   
   {% if projects %}
@@ -25,21 +24,21 @@
         {% endif %}
         ">
         </div>
-        <h5>{{ project.title }}</h5>
       </a>
+      <h5>{{ project.title }}</h5>
     </section>
     {% endfor %}
   {% else %}
   	Sadly, there aren't any projects to display right now.
   {% endif %}
-</article>
+</section>
 
-<article class="more">
+<section class="more">
 	<h3>More</h3>
 	<ul>
 		<li><a href="{% url 'experience' %}">Experience</a></li>
 		<li><a href="{% url 'about' %}">About</a></li>
 		<li><a href="#">Blog</a></li>
 	</ul>
-</article>
+</section>
 {% endblock %}

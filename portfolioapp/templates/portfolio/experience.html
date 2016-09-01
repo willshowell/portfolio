@@ -1,18 +1,18 @@
 {% extends "portfolio/partials/base_page.html" %}
 
 {% block page_content %}
-<header>
+<section>
   <div class="title">
     <h2>Experience</h2>
   </div>
-</header>
+</section>
 
 {% for exp in experiences %}
-<article class="major {% if forloop.first %}first{% endif %}">
+<section class="major {% if forloop.first %}first{% endif %}">
   <div class="experience-inline">
     <h4>{{ exp.location }}</h4><h5 class="date">{{ exp.start_date|date:"Y" }}-{{ exp.end_date|date:"Y" }}</h5>
   </div>
-</article>
+</section>
 {% endfor %}
 
 {% endblock %}

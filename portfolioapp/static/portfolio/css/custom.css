@@ -89,6 +89,9 @@ h5 {
   margin: 8px 0;
   text-transform: none;]
 }
+p {
+  font-size: 20px;
+}
 .ultralight {
   opacity: 0.2;
 }
@@ -96,10 +99,14 @@ h5 {
 /* General */
 .container {
   padding: 0 16px;
-  max-width: 960px;
+  max-width: 1000px;
   margin: 0 auto;
 }
-article {
+.container-slim {
+  max-width: 760px;
+  margin: 0 auto;
+}
+section {
   padding-top: 64px; 
   overflow: auto;
 }
@@ -132,6 +139,7 @@ footer {
 }
 .project-section {
   margin: 8px 0;
+  padding-top: 0px; 
   width: 100%;
   text-align: center;
 }

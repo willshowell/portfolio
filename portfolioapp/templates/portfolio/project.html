@@ -1,24 +1,26 @@
 {% extends 'portfolio/partials/base_page.html' %}
 
 {% block page_content %}
-<article>
-	<h3>{{ project.title }}</h3>
-  <h5>{{ project.tagline }}</h5>
+<div class="container-slim">
+	<section>
+		<h3>{{ project.title }}</h3>
+	  <h5>{{ project.tagline }}</h5>
 
-	{% if project.project_url %}
-	<a class="button live-button" onMouseOver="this.style.backgroundColor='{{ project.background_color }}'" 
-	onMouseOut="this.style.backgroundColor='#bbb'" href="{{ project.project_url }}">Check it out!</a>
-	{% endif %}
-	
-	{% if project.source_url %}
-	<a class="button source-button" onMouseOver="this.style.backgroundColor='{{ project.background_color }}'" 
-	onMouseOut="this.style.backgroundColor='#bbb'" href="{{ project.source_url }}">Source code</a>
-	{% endif %}
+		{% if project.project_url %}
+		<a class="button live-button" onMouseOver="this.style.backgroundColor='{{ project.background_color }}'" 
+		onMouseOut="this.style.backgroundColor='#bbb'" href="{{ project.project_url }}">Check it out!</a>
+		{% endif %}
+		
+		{% if project.source_url %}
+		<a class="button source-button" onMouseOver="this.style.backgroundColor='{{ project.background_color }}'" 
+		onMouseOut="this.style.backgroundColor='#bbb'" href="{{ project.source_url }}">Source code</a>
+		{% endif %}
 
-</article>
-<article>
-	{% if project.description %}
-  <p>{{ project.description|safe|linebreaksbr }}</p>
-	{% endif %}
-</article>
+	</section>
+	<section>
+		{% if project.description %}
+	  <p>{{ project.description|safe|linebreaksbr }}</p>
+		{% endif %}
+	</section>
+</div>
 {% endblock %}
