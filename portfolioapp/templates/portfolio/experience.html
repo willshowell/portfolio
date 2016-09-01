@@ -1,11 +1,19 @@
 {% extends "portfolio/partials/base.html" %}
 
-{% block body %}
+{% block content %}
+<div class="container">
+  <header>
+    <div class="title">
+      <h1>Experience</h1>
+    </div>
+  </header>
   {% for exp in experiences %}
-  <div class="major {% if forloop.first %}first{% endif %}">
+  <article class="major {% if forloop.first %}first{% endif %}">
     <div class="experience-inline">
       <h2>{{ exp.location }}</h2><h4 class="date">{{ exp.start_date|date:"Y" }}-{{ exp.end_date|date:"Y" }}</h4>
     </div>
-  </div>
+  </article>
   {% endfor %}
+</div>  
+
 {% endblock %}

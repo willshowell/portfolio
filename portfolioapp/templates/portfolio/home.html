@@ -1,14 +1,45 @@
 {% extends 'portfolio/partials/base.html' %}
 
-{% block body %}
-<h3>Projects</h3>
-<hr>
-{% for project in projects %}
-  <h4>{{ project.title }}</h4>
-  <p>
-    <a href="{{ project.source_url }}">Source</a> // 
-    <a href="{{ project.project_url }}">Live</a>
-  </p>
-  <br><br>
-{% endfor %}
+{% block content %}
+<div class="container">
+
+  <header class="pos-bottom">
+    <div class="title">
+      <h1>Will</h1>
+      <h1>Howell</h1>
+    </div>
+    <h4>Engineer <span class="ultralight">|</span> Raleigh</h4>
+  </header>
+  
+  <article class="projects">
+    <h3 id="projects-header">Projects</h3>
+    
+    {% if projects %}
+    	{% for project in projects %}
+	    <section class="project-section col-{% if forloop.counter0|divisibleby:2 %}left{% else %}right{% endif %}">
+	      <a href="#">
+	        <div id="" class="project">
+	        </div>
+	        <h5>{{ project.title }}</h5>
+	      </a>
+	    </section>
+	    {% endfor %}
+    {% else %}
+	  	Sadly, there aren't any projects to display right now.
+	  {% endif %}
+  </article>
+  
+  <article class="more">
+  	<h3>More</h3>
+  	<ul>
+  		<li><a href="{% url 'experience' %}">Professional Experience</a></li>
+  		<li><a href="{% url 'about' %}">About</a></li>
+  		<li><a href="#">Blog</a></li>
+  	</ul>
+  </article>
+  
+  <footer>
+  	&copy; 2016 <a href="#">Will Howell</a>
+  </footer>
+</div>
 {% endblock %}
