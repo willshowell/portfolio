@@ -1,19 +1,18 @@
-{% extends "portfolio/partials/base.html" %}
+{% extends "portfolio/partials/base_page.html" %}
 
-{% block content %}
-<div class="container">
-  <header>
-    <div class="title">
-      <h1>Experience</h1>
-    </div>
-  </header>
-  {% for exp in experiences %}
-  <article class="major {% if forloop.first %}first{% endif %}">
-    <div class="experience-inline">
-      <h2>{{ exp.location }}</h2><h4 class="date">{{ exp.start_date|date:"Y" }}-{{ exp.end_date|date:"Y" }}</h4>
-    </div>
-  </article>
-  {% endfor %}
-</div>  
+{% block page_content %}
+<header>
+  <div class="title">
+    <h2>Experience</h2>
+  </div>
+</header>
+
+{% for exp in experiences %}
+<article class="major {% if forloop.first %}first{% endif %}">
+  <div class="experience-inline">
+    <h4>{{ exp.location }}</h4><h5 class="date">{{ exp.start_date|date:"Y" }}-{{ exp.end_date|date:"Y" }}</h5>
+  </div>
+</article>
+{% endfor %}
 
 {% endblock %}

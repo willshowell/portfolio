@@ -10,12 +10,16 @@ class Project(models.Model):
         blank=True,
         null=True
         )
-    source_url = models.CharField(
+    description = models.TextField(
+        blank=True,
+        null=True
+        )
+    source_url = models.URLField(
         max_length=100,
         blank=True,
         null=True
         )
-    project_url = models.CharField(
+    project_url = models.URLField(
         max_length=100,
         blank=True,
         null=True

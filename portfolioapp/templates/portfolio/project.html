@@ -1,0 +1,14 @@
+{% extends 'portfolio/partials/base_page.html' %}
+
+{% block page_content %}
+<header>
+  <div class="title">
+    <h3>{{ project.title }}</h3>
+  </div>
+  <h5>{{ project.tagline }}</h5>
+</header>
+
+<article>
+  <p>{{ project.description|linebreaksbr }}</p>
+</article>
+{% endblock %}
