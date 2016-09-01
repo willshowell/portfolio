@@ -7,6 +7,6 @@
   </div>
 </header>
 <article>
-  {{ about.description|linebreaksbr }}
+  {{ about.description|safe|linebreaksbr }}
 </article>
 {% endblock %}
