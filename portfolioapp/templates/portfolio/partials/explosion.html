@@ -1,0 +1,8 @@
+<div id="explosion-header"></div>
+{% load static %}
+<script src="{% static 'portfolio/js/explosion.js' %}"></script>
+<script>
+  explosionJS.load('explosion-header', "{% static 'portfolio/js/config.json' %}", function() {
+    console.log('explosion.js loaded');
+  });
+</script>

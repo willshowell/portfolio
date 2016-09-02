@@ -27,6 +27,7 @@ ol, ul {
 li {
   margin-top: 8px;
   font-size: 24px;
+  display: inline-block;
 }
 a {
   text-decoration: none;
@@ -116,8 +117,21 @@ section {
   margin-bottom: 16px;
 }
 .pos-bottom {
-  height: 100vh;
-  padding-top: calc(100vh - 184px - 60px); /* 69 is for safari bar */
+  /*padding-top: calc(100vh - 184px - 60px); */
+  /*padding-top: calc(100vh - 124px - 69px - 159px);*//* 69 is for safari bar */
+  margin-top: calc(100vh);
+  transform: translateY(calc(-1 * (100% + 16px)));
+}
+
+/* Explosion Header */
+#explosion-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: -1;
+  /*background-color: #fff;*/
 }
 
 /* Footer */
