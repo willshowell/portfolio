@@ -1,4 +1,5 @@
 from django.db import models
+from ordered_model.models import OrderedModel
 from django.core.exceptions import ValidationError
 
 def validate_only_one_instance(obj):
@@ -8,7 +9,7 @@ def validate_only_one_instance(obj):
         raise ValidationError("Can only create 1 {} instance".format(model.__name__))
 
 
-class Project(models.Model):
+class Project(OrderedModel):
     title = models.CharField(
         max_length=100
         )
