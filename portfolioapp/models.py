@@ -67,6 +67,15 @@ class About(models.Model):
         blank=True,
         null=True
         )
+    image_size = models.IntegerField(
+        blank=True,
+        null=True
+        )
+    image_url = models.URLField(
+        max_length=100,
+        blank=True,
+        null=True
+        )
     
     def clean(self):
         validate_only_one_instance(self)
