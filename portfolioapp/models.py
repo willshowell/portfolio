@@ -39,7 +39,6 @@ class Project(OrderedModel):
         )
     background_color = models.CharField(
         max_length=100,
-        blank=True,
         null=True
         )
 
@@ -50,7 +49,6 @@ class Project(OrderedModel):
 class Experience(models.Model):
     location = models.CharField(max_length=100)
     start_date = models.DateField(
-        blank=True,
         null=True
         )
     end_date = models.DateField(
