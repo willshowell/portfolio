@@ -92,6 +92,8 @@ h5 {
 }
 p {
   font-size: 20px;
+  line-height: 30px;
+  margin: 0px;
 }
 .ultralight {
   opacity: 0.2;
@@ -185,6 +187,9 @@ a.button:hover {
 /* About page */
 .about-image {
   float: left;
+  margin: 8px 16px 0px 0px;
+  background-position: center;
+  background-size: cover;
 }
 
 @media screen and (min-width: 570px) {

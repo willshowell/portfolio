@@ -8,7 +8,9 @@
 	  </div>
 	</section>
 	<section>
-	  <p><img class="about-image" src="{{ about.image_url }}" height="{{ about.image_size }}" width="{{ about.image_size }}">{{ about.description|safe|linebreaksbr }}</p>
+	<div class="about-image" style="background-image: url({{ about.image_url }}); height: {{ about.image_size }}px; width: {{ about.image_size }}px">
+	</div>
+	  <p>{{ about.description|safe|linebreaksbr }}</p>
 	</section>
 </div>
 {% endblock %}
