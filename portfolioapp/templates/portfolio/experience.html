@@ -6,7 +6,7 @@
 </section>
 
 {% for exp in experiences %}
-<section class="major {% if forloop.first %}first{% endif %}">
+<section class="experience">
   <div class="experience-inline">
     <h4>{{ exp.location }}</h4>
     <h5 class="date">
@@ -21,8 +21,10 @@
 	    {% endif %}
 	  {% endif %}
     </h5>
+    {% if exp.description %}
+    <p>{{ exp.description|safe|linebreaksbr }}</p>
+    {% endif %}
   </div>
 </section>
 {% endfor %}
-
 {% endblock %}

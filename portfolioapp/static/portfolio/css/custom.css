@@ -82,6 +82,7 @@ h4 {
   color: rgba(0,0,0,0.6);
   font-weight: 300;
   margin-bottom: 16px;
+  letter-spacing: 1.6px;
 }
 h5 {
   font-size: 16px;
@@ -116,7 +117,7 @@ p {
   margin: 0 auto;
 }
 section {
-  padding-top: 16px; 
+  padding-top: 40px; 
   overflow: auto;
 }
 section.title {
@@ -210,6 +211,11 @@ a.button:hover {
   font-family: 'Montserrat';
   font-weight: 300;
   font-size: 12px;
+}
+
+/* Experience page */
+section.experience {
+  padding-top: 56px;
 }
 
 /* About page */

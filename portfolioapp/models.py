@@ -60,6 +60,9 @@ class Experience(models.Model):
         blank=True,
         null=True
         )
+    description = models.TextField(
+        blank=True
+        )
 
     def __str__(self):
         return self.location
