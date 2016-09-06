@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="180px" height="180px" viewBox="0 0 180 180" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M112.50407,60 L91.7164446,60 C89.7755259,46.4308234 78.1058876,36 64,36 C48.536027,36 36,48.536027 36,64 C36,78.1058876 46.4308234,89.7755259 60,91.7164446 L60,112.50407 C53.0990911,114.280241 48,120.544642 48,128 C48,136.836556 55.163444,144 64,144 C72.836556,144 80,136.836556 80,128 C80,120.544642 74.9009089,114.280241 68,112.50407 L68,91.7164446 C72.7436271,91.0379219 77.1037095,89.1704322 80.7686844,86.4255386 L102.215276,107.872131 C100.807718,110.254184 100,113.032766 100,116 C100,124.836556 107.163444,132 116,132 C124.836556,132 132,124.836556 132,116 C132,107.163444 124.836556,100 116,100 C113.032766,100 110.254184,100.807718 107.872131,102.215276 L86.4255386,80.7686844 C89.1704322,77.1037095 91.0379219,72.7436271 91.7164446,68 L112.50407,68 C114.280241,74.9009089 120.544642,80 128,80 C136.836556,80 144,72.836556 144,64 C144,55.163444 136.836556,48 128,48 C120.544642,48 114.280241,53.0990911 112.50407,60 Z" id="path-1"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Portfolio-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Portfolio-CMS">
+            <g id="Combined-Shape">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
