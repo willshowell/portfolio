@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.postgres.fields import ArrayField
 from ordered_model.models import OrderedModel
 from django.core.exceptions import ValidationError
 
@@ -41,6 +42,10 @@ class Project(OrderedModel):
         max_length=100,
         null=True
         )
+    technologies = ArrayField(models.CharField(
+        max_length=100,
+        blank=True
+        ))
 
     def __str__(self):
         return self.title

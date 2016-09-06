@@ -14,8 +14,14 @@
 		{% if project.source_url %}
 		<a class="button source-button" href="{{ project.source_url }}">Source code</a>
 		{% endif %}
-
+		
+		{% if project.technologies %}
+		<div class="tech-list">{{ project.technologies|join:", " }}</div>
+		{% endif %}
 	</section>
+	
+	
+	
 	<section>
 		{% if project.description %}
 	  <p>{{ project.description|safe|linebreaksbr }}</p>
