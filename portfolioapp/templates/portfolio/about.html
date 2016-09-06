@@ -2,14 +2,13 @@
 
 {% block page_content %}
 <div class="container-slim">
-	<section>
-	  <div class="title">
-	    <h1>About</h1>
-	  </div>
+	<section class="title">
+    <h1>About</h1>
 	</section>
+	
 	<section>
-	<div class="about-image" style="background-image: url({{ about.image }}); height: {{ about.image_size }}px; width: {{ about.image_size }}px">
-	</div>
+		<div class="about-image" style="background-image: url({{ about.image }}); height: {{ about.image_size }}px; width: {{ about.image_size }}px">
+		</div>
 	  <p>{{ about.description|safe|linebreaksbr }}</p>
 	</section>
 </div>

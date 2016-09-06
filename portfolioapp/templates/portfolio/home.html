@@ -1,16 +1,13 @@
 {% extends 'portfolio/partials/base_page.html' %}
 
 {% block page_content %}
-<section>
-  <div class="title">
-    <h1>Will Howell</h1>
-  </div>
+<section class="title">
+  <h1>Will Howell</h1>
   <h4>Engineer <span class="ultralight">|</span> Raleigh</h4>
-</header>
+</section>
 
 <section class="projects">
   <h3 id="projects-header">Projects</h3>
-  
   {% if projects %}
   	{% for project in projects %}
     <section class="project-section col-{% if forloop.counter0|divisibleby:2 %}left{% else %}right{% endif %}">
@@ -37,8 +34,10 @@
 <section class="more">
 	<h3>More</h3>
 	<ul>
-		<li><a href="{% url 'experience' %}">Experience</a><span class="ultralight"> | </span></li>
-		<li><a href="{% url 'about' %}">About</a><span class="ultralight"> | </span></li>
+		<li><a href="{% url 'experience' %}">Experience</a></li>
+    <span class="ultralight li-spacer"> | </span>
+		<li><a href="{% url 'about' %}">About</a></li>
+    <span class="ultralight li-spacer"> | </span>
 		<li><a href="#">Blog</a></li>
 	</ul>
 </section>
