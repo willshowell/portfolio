@@ -125,7 +125,7 @@ section.title {
 }
 .main {
   overflow: auto;
-  padding-bottom: 64px;
+  padding-bottom: 128px;
 }
 
 /* Header */
@@ -145,8 +145,8 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 64px;
-  line-height: 64px;
+  height: 128px;
+  line-height: 192px;
   text-align: center;
   opacity: 0.7;
 }
