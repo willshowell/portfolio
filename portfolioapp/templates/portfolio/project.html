@@ -5,6 +5,9 @@
 	<section class="title">
 		<h3>{{ project.title }}</h3>
 	  <h5>{{ project.tagline }}</h5>
+	  {% if project.technologies %}
+		<div class="tech-list">{{ project.technologies|join:", " }}</div>
+		{% endif %}
 
 		{% if project.project_url %}
 		<a class="button live-button" style="background-color: {{ project.background_color }};"
@@ -15,9 +18,7 @@
 		<a class="button source-button" href="{{ project.source_url }}">Source code</a>
 		{% endif %}
 		
-		{% if project.technologies %}
-		<div class="tech-list">{{ project.technologies|join:", " }}</div>
-		{% endif %}
+		
 	</section>
 	
 	
