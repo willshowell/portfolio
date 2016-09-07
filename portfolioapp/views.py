@@ -14,7 +14,7 @@ def about(request):
     return render(request, 'portfolio/about.html', {'about': about })
 
 def blog(request):
-		return render(request, 'portfolio/blog.html')
+    return render(request, 'portfolio/blog.html')
 
 def project_detail(request, project_id):
     project = get_object_or_404(Project, pk=project_id)
