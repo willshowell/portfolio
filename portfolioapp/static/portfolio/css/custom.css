@@ -238,6 +238,7 @@ section.experience {
   border-radius: 6px;
 }
 
+/* Media queries */
 @media screen and (min-width: 570px) {
   .project-section {
     width: calc(50% - 8px);
