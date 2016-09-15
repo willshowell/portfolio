@@ -1,7 +1,33 @@
 {% extends 'portfolio/partials/base_page.html' %}
 
 {% block page_content %}
-{% include 'portfolio/partials/back_button.html' %}
+
+    <section class="mw6 center bg-near-white pa3 ph4-ns">
+      <h1 class="">{{ project.title }}</h1>
+      <h5 class="black-50 mv2">{{ project.tagline }}</h5>
+
+
+      {% if project.technologies %}
+      <div class="ttu f6 tracked">{{ project.technologies|join:", " }}</div>
+      {% endif %}
+
+      {% if project.project_url %}
+      <a class="f6 grow no-underline ph3 pv2 mv3 mr2 dib white bg-navy" style="background-color: {{ project.background_color }};" href="{{ project.project_url }}">Check it out!</a>
+      {% endif %}
+
+      {% if project.source_url %}
+      <a class="f6 no-underline ba ph3 pv2 mb2 dib black" style="color: {{ project.background_color }};" href="{{ project.source_url }}">Source code</a>
+      {% endif %}
+
+      {% if project.description %}
+      <hr class="b--black-10 w-60">
+
+      <p class="measure lh-copy">{{ project.description|safe|linebreaksbr }}</p>
+
+      {% endif %}
+    </section>
+
+{% comment %}
 <div class="container-slim">
 	<section class="title">
 		<h3>{{ project.title }}</h3>
@@ -19,15 +45,13 @@
 		<a class="button source-button" href="{{ project.source_url }}">Source code</a>
 		{% endif %}
 		
-		
 	</section>
-	
-	
-	
 	<section>
 		{% if project.description %}
 	  <p>{{ project.description|safe|linebreaksbr }}</p>
 		{% endif %}
 	</section>
 </div>
+{% endcomment %}
+
 {% endblock %}

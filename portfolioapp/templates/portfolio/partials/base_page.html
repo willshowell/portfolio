@@ -1,15 +1,24 @@
 {% extends 'portfolio/partials/base.html' %}
 
 {% block content %}
-<div class="container">
 
-	<div class="main">
+  <header class="tc ttu tracked-mega pa4 mb3">
+    <a href="{% url 'home' %}" class="link"><h1 class="f1 navy">Will Howell</h1></a>
+      <h2 class="f5 fw4 tracked-large mid-gray">Engineer | Raleigh</h2>
+  </header>
+
+	<main>
 	{% block page_content %}
 	{% endblock %}
-	</div>
+	</main>
 
-  <footer>
-  	&copy; 2016 <a href="{% url 'home' %}">Will Howell</a>
+  <footer class="pv4 ph3 mt4">
+    <div class="tc">
+      <a href="{% url 'about' %}" class="mid-gray link dim ph2">About</a><span class="black-10">|</span>
+      <a href="{% url 'experience' %}" class="mid-gray link dim ph2">Experience</a><span class="black-10">|</span>
+      <a href="{% url 'blog' %}" class="mid-gray link dim ph2">Blog</a>
+    </div>
+    <a href="/" class="link dark-gray f6 fw1 db tc mt3 ">&copy; <span class="fw6">Will Howell 2016</span></a>
   </footer>
-</div>
+
 {% endblock content %}

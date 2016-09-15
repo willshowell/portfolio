@@ -1,7 +1,33 @@
 {% extends "portfolio/partials/base_page.html" %}
 
 {% block page_content %}
-{% include 'portfolio/partials/back_button.html' %}
+
+{% for exp in experiences %}
+<section class="mw6 mb4 center bg-near-white pa3 ph4-ns">
+  <h1>{{ exp.location }}</h1>
+  <h5 class="tracked black-50">
+  {% if exp.start_date.year == exp.end_date.year %}
+    {{ exp.start_date|date:"Y" }}
+  {% else %}
+    {{ exp.start_date|date:"Y" }} -
+    {% if exp.end_date %}
+      {{ exp.end_date|date:"Y" }}
+    {% else %}
+      Present
+    {% endif %}
+  {% endif %}
+  </h5>
+  {% if exp.description %}
+  <p class="measure lh-copy">{{ exp.description|safe|linebreaksbr }}</p>
+  {% endif %}
+
+</section>
+
+
+{% endfor %}
+
+
+{% comment %}
 <div class="container-slim">
   <section <div class="title">
     <h2>Experience</h2>
@@ -30,4 +56,6 @@
   </section>
 {% endfor %}
 </div>
+{% endcomment %}
+
 {% endblock %}

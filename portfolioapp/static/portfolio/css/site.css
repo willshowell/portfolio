@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.project-cover {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 4rem;
+
+}
+
+hr {
+  border-style: solid;
+}
+
+.about-image {
+  height: 11rem;
+  object-fit: cover;
+  object-position: 0 0%;
+  //float: right;
+}
