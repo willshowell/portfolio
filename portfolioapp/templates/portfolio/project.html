@@ -35,10 +35,10 @@
 
       <!-- external links -->
       {% if project.project_url %}
-      <a class="f6 grow no-underline ph3 pv2 mv3 mr2 dib white bg-navy" style="background-color: {{ project.background_color }};" href="{{ project.project_url }}">Check it out!</a>
+      <a target="_blank" class="f6 grow no-underline ph3 pv2 mv3 mr2 dib white bg-navy" style="background-color: {{ project.background_color }};" href="{{ project.project_url }}">Check it out!</a>
       {% endif %}
       {% if project.source_url %}
-      <a class="f6 no-underline ba ph3 pv2 mv3 dib black" style="color: {{ project.background_color }};" href="{{ project.source_url }}">Source code</a>
+      <a target="_blank" class="f6 no-underline ba ph3 pv2 mv3 dib black bg-white-50" style="color: {{ project.background_color }};" href="{{ project.source_url }}">Source code</a>
       {% endif %}
 
       <!-- description -->
