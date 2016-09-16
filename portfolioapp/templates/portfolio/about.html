@@ -1,9 +1,9 @@
 {% extends 'portfolio/partials/base_page.html' %}
 
 {% block page_content %}
-    <section class="mw6 center bg-near-white pa3 ph4-ns">
-      <h1 class="">About</h1>
-      <img src="{{ about.image }}" class="w-100 dib mr3 mb3 about-image">
-	  <p class="measure lh-copy">{{ about.description|safe|linebreaksbr }}</p>
-    </section>
+<section class="mw6 center bg-near-white pa3 ph4-ns">
+  <h1>About</h1>
+  <img src="{{ about.image }}" class="w-100 dib mr3 mb3 about-image">
+<p class="measure lh-copy">{{ about.description|safe|linebreaksbr }}</p>
+</section>
 {% endblock %}

@@ -1,27 +1,69 @@
+/* 
+ * Make the footer sticky to the 
+ * bottom of the page.
+ */
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
-
 main {
   flex: 1;
 }
 
+/*
+ * Set the project image in the center
+ * of the project div.
+ */
 .project-cover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 4rem;
-
 }
 
+/* Give a little sex appeal to the description */
 hr {
   border-style: solid;
 }
 
+/* Make me beautiful */
 .about-image {
   height: 11rem;
   object-fit: cover;
   object-position: 0 0%;
-  //float: right;
+}
+
+/*
+ * Put the pagination arrows in 
+ * the perfect position.
+ */
+.right-arrow, .left-arrow {
+  position: relative;
+  top: 1px;
+}
+.left-arrow {left: -1rem;}
+.right-arrow {left: 1rem;}
+
+/*
+ * Allow the pagination buttons to clear
+ * and reach full width once the screen
+ * size gets smaller than the project
+ * box.
+ */
+@media screen and (max-width: 48rem) {
+  .pagination {
+    zoom: 1;
+    margin-bottom: 2rem;
+  }
+  .pagination:before,
+  .pagination:after {
+    content: " ";
+    display: table;
+  }
+  .pagination:after {
+    clear: both;
+  }
+  .pagination a > div {
+    width: 50%;
+  }
 }

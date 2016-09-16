@@ -1,10 +1,10 @@
 {% extends 'portfolio/partials/base_page.html' %}
 
 {% block page_content %}
-<div class="container-slim">
-	<section>
-		<h1>404</h1>
-		<p>Nothing's going on here. Stop loitering and go back to <a href="{% url 'home' %}">where you came from.</a></p>
-	</section>
-</div>
+<section class="mw6 center bg-near-white pa3 ph4-ns">
+  <h1>404</h1>
+  <p class="measure lh-copy">
+    Hey uh... Nothing's going on here. Why don't you stop loitering and <a class="link underline-hover" href="{% url 'home' %}">scram!</a>
+  </p>
+</section>
 {% endblock %}

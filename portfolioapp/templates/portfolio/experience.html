@@ -20,42 +20,7 @@
   {% if exp.description %}
   <p class="measure lh-copy">{{ exp.description|safe|linebreaksbr }}</p>
   {% endif %}
-
 </section>
-
-
 {% endfor %}
-
-
-{% comment %}
-<div class="container-slim">
-  <section <div class="title">
-    <h2>Experience</h2>
-  </section>
-
-  {% for exp in experiences %}
-  <section class="experience">
-    <div class="experience-inline">
-      <h4>{{ exp.location }}</h4>
-      <h5 class="date">
-      {% if exp.start_date.year == exp.end_date.year %}
-      	{{ exp.start_date|date:"Y" }}
-      {% else %}
-  	    {{ exp.start_date|date:"Y" }} -
-  	    {% if exp.end_date %}
-  	    	{{ exp.end_date|date:"Y" }}
-  	    {% else %}
-  	    	Present
-  	    {% endif %}
-  	  {% endif %}
-      </h5>
-      {% if exp.description %}
-      <p>{{ exp.description|safe|linebreaksbr }}</p>
-      {% endif %}
-    </div>
-  </section>
-{% endfor %}
-</div>
-{% endcomment %}
 
 {% endblock %}

@@ -2,6 +2,10 @@
 
 {% block page_content %}
 <section class="mw6 center pa3 ph4-ns">
-  <p class="measure lh-copy tc">I'm working on it...</p>
+  {% if blog_posts %}
+
+  {% else %}
+  <p class="tc">I'm working on it... <sup style="font-size: 0.5rem">I swear</sup></p>
+  {% endif %}
 </section>
 {% endblock %}

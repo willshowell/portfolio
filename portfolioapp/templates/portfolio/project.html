@@ -1,57 +1,51 @@
 {% extends 'portfolio/partials/base_page.html' %}
 
 {% block page_content %}
-
-    <section class="mw6 center bg-near-white pa3 ph4-ns">
-      <h1 class="">{{ project.title }}</h1>
-      <h5 class="black-50 mv2">{{ project.tagline }}</h5>
-
-
-      {% if project.technologies %}
-      <div class="ttu f6 tracked">{{ project.technologies|join:", " }}</div>
+    <!-- Pagination -->
+    <div class="pagination">
+      <!-- previous -->
+      {% if prev %}
+      <a class="link light-blue" href="{% url 'project_detail' prev.id %}">
+        <div class="fl pa3 w4 tc bg-black-70 br b--white">
+          <div class="mv0"><span class="left-arrow">◀</span>Previous</div>
+        </div>
+      </a>
       {% endif %}
 
+      <!-- next -->
+      {% if next %}
+      <a class="link orange" href="{% url 'project_detail' next.id %}">
+        <div class="fr pa3 w4 tc bg-black-70 bl b--white">
+          <div class="mv0">Next <span class="right-arrow">▶</span></div>
+        </div>
+      </a>
+      {% endif %}
+    </div>
+
+    <!-- Project -->
+    <section class="mw6 center bg-near-white pa3 ph4-ns">
+      <!-- title -->
+      <h1 class="mb2">{{ project.title }}</h1>
+      <h5 class="black-50 mt2 mb3">{{ project.tagline }}</h5>
+
+      <!-- tech used -->
+      {% if project.technologies %}
+      <div class="ttu f6 tracked fw6 black-70">{{ project.technologies|join:", " }}</div>
+      {% endif %}
+
+      <!-- external links -->
       {% if project.project_url %}
       <a class="f6 grow no-underline ph3 pv2 mv3 mr2 dib white bg-navy" style="background-color: {{ project.background_color }};" href="{{ project.project_url }}">Check it out!</a>
       {% endif %}
-
       {% if project.source_url %}
-      <a class="f6 no-underline ba ph3 pv2 mb2 dib black" style="color: {{ project.background_color }};" href="{{ project.source_url }}">Source code</a>
+      <a class="f6 no-underline ba ph3 pv2 mv3 dib black" style="color: {{ project.background_color }};" href="{{ project.source_url }}">Source code</a>
       {% endif %}
 
+      <!-- description -->
       {% if project.description %}
-      <hr class="b--black-10 w-60">
-
+      <hr class="b--black-10 w-60 mv4">
       <p class="measure lh-copy">{{ project.description|safe|linebreaksbr }}</p>
-
       {% endif %}
     </section>
-
-{% comment %}
-<div class="container-slim">
-	<section class="title">
-		<h3>{{ project.title }}</h3>
-	  <h5>{{ project.tagline }}</h5>
-	  {% if project.technologies %}
-		<div class="tech-list">{{ project.technologies|join:", " }}</div>
-		{% endif %}
-
-		{% if project.project_url %}
-		<a class="button live-button" style="background-color: {{ project.background_color }};"
-		href="{{ project.project_url }}">Check it out!</a>
-		{% endif %}
-		
-		{% if project.source_url %}
-		<a class="button source-button" href="{{ project.source_url }}">Source code</a>
-		{% endif %}
-		
-	</section>
-	<section>
-		{% if project.description %}
-	  <p>{{ project.description|safe|linebreaksbr }}</p>
-		{% endif %}
-	</section>
-</div>
-{% endcomment %}
 
 {% endblock %}
