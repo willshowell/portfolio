@@ -44,6 +44,11 @@ hr {
 .left-arrow {left: -1rem;}
 .right-arrow {left: 1rem;}
 
+/* Stop shrinking the .grow class on click*/
+.grow:active {
+  transform: scale(1.05);
+}
+
 /*
  * Allow the pagination buttons to clear
  * and reach full width once the screen
