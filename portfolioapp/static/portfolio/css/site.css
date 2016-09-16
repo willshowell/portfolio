@@ -12,6 +12,17 @@ main {
 }
 
 /*
+ * Make those anchors beautiful.
+ */
+a {
+  text-decoration: none;
+  color: #2f7ee7;
+}
+p a:hover {
+  text-decoration: underline;
+}
+
+/*
  * Set the project image in the center
  * of the project div.
  */
