@@ -17,5 +17,26 @@ def blog(request):
     return render(request, 'portfolio/blog.html')
 
 def project_detail(request, project_id):
+    # Get this project data
     project = get_object_or_404(Project, pk=project_id)
-    return render(request, 'portfolio/project.html', {'project': project})
+    next_p = 0
+    prev_p = 0
+
+    # Try to retrieve data about the previous and next projects
+    try:
+        next_p = Project.objects.get(order = project.order + 1)
+    except Project.DoesNotExist:
+        pass
+    try:
+        prev_p = Project.objects.get(order = project.order - 1)
+    except Project.DoesNotExist:
+        pass
+
+    # Generate the context
+    context = {'project': project}
+    if next_p:
+        context['next'] = next_p
+    if prev_p:
+        context['prev'] = prev_p
+
+    return render(request, 'portfolio/project.html', context)

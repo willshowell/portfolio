@@ -1,45 +1,31 @@
 {% extends 'portfolio/partials/base_page.html' %}
 
 {% block page_content %}
-<section class="title">
-  <h1>Will Howell</h1>
-  <h4>Engineer <span class="ultralight">|</span> Raleigh</h4>
-</section>
-
-<section class="projects">
-  <h3 id="projects-header">Projects</h3>
+<!-- Project List -->
+<section class="ph3 mw6 center">
   {% if projects %}
+  <div class="flex flex-row flex-wrap justify-center">
+
+    <!-- individual project -->
   	{% for project in projects %}
-    <section class="project-section col-{% if forloop.counter0|divisibleby:2 %}left{% else %}right{% endif %}">
-      <a href="{% url 'project_detail' project.id %}">
-        <div id="" class="project" style="{% if project.background_image %}
-        {% load static %}
-        background-image: url('{{ project.background_image }}');
-        {% endif %}
-        {% if project.background_color %}
-        background-color: {{ project.background_color }};
-        {% endif %}
-        ">
-        </div>
-      </a>
-      <h5>{{ project.title }}</h5>
-    </section>
+    <a href="{% url 'project_detail' project.id %}">
+      <div class="ma2 grow w4 h4 bg-mid-gray project-cover"
+        style="{% if project.background_image %}
+          {% load static %}
+          background-image: url('{{ project.background_image }}');
+          {% endif %}
+          {% if project.background_color %}
+          background-color: {{ project.background_color }};
+          {% endif %}
+          ">
+      </div>
+    </a>
     {% endfor %}
+
+  </div>
   {% else %}
-  	Sadly, there aren't any projects to display right now.
+  <div class="tc">Sadly, there are no projects on display right now.</div>
   {% endif %}
-</section>
-
-
-<section class="more">
-	<h3>More</h3>
-	<ul>
-		<li><a href="{% url 'experience' %}">Experience</a></li>
-    <span class="ultralight li-spacer"> | </span>
-		<li><a href="{% url 'about' %}">About</a></li>
-    <span class="ultralight li-spacer"> | </span>
-		<li><a href="{% url 'blog' %}">Blog</a></li>
-	</ul>
 </section>
 
 {% endblock %}

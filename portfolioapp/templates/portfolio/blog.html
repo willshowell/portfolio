@@ -1,14 +1,11 @@
 {% extends 'portfolio/partials/base_page.html' %}
 
 {% block page_content %}
-{% include 'portfolio/partials/back_button.html' %}
-<div class="container-slim">
-	<section class="title">
-    <h1>Blog</h1>
-	</section>
-	
-	<section>
-	  <p>I'll get to it eventually...</p>
-	</section>
-</div>
+<section class="mw6 center pa3 ph4-ns">
+  {% if blog_posts %}
+
+  {% else %}
+  <p class="tc">I'm working on it... <sup style="font-size: 0.5rem">I swear</sup></p>
+  {% endif %}
+</section>
 {% endblock %}
