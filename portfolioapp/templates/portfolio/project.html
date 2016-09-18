@@ -5,8 +5,8 @@
     <div class="pagination">
       <!-- previous -->
       {% if prev %}
-      <a class="link light-blue" href="{% url 'project_detail' prev.id %}">
-        <div class="fl pa3 w4 tc bg-black-70 br b--white">
+      <a class="link black" href="{% url 'project_detail' prev.id %}">
+        <div class="fl pa3 w4 tc ba ml5">
           <div class="mv0"><span class="left-arrow">◀</span>Previous</div>
         </div>
       </a>
@@ -14,8 +14,8 @@
 
       <!-- next -->
       {% if next %}
-      <a class="link orange" href="{% url 'project_detail' next.id %}">
-        <div class="fr pa3 w4 tc bg-black-70 bl b--white">
+      <a class="link black" href="{% url 'project_detail' next.id %}">
+        <div class="fr pa3 w4 tc ba mr5">
           <div class="mv0">Next <span class="right-arrow">▶</span></div>
         </div>
       </a>
