@@ -41,8 +41,7 @@ hr {
 /* Make me beautiful */
 .about-image {
   height: 11rem;
-  object-fit: cover;
-  object-position: 0 0%;
+  background-size: cover;
 }
 
 /*

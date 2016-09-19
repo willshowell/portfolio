@@ -3,7 +3,7 @@
 {% block page_content %}
 <section class="mw6 center bg-near-white pa3 ph4-ns">
   <h1>About</h1>
-  <img src="{{ about.image }}" class="w-100 dib mr3 mb3 about-image">
+  <div class="w-100 dib mb3 about-image" style="background-image: url({{ about.image }});"></div>
 <p class="measure lh-copy">{{ about.description|safe|linebreaksbr }}</p>
 </section>
 {% endblock %}
