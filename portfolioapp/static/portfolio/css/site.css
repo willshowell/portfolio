@@ -35,6 +35,7 @@ p a:hover {
 /* Give a little sex appeal to the description */
 hr {
   border-style: solid;
+  border-bottom: none;
 }
 
 /* Make me beautiful */
