@@ -92,3 +92,25 @@ class About(models.Model):
     class Meta:
         verbose_name = "about description"
         verbose_name_plural = "about"
+
+
+class BlogTopic(models.Model):
+    topic = models.CharField(max_length=40)
+
+    def __str__(self):
+
+        return self.topic
+
+
+class BlogPost(models.Model):
+    title = models.CharField(max_length=200)
+    pub_date = models.DateTimeField('date published')
+    topic = models.ForeignKey(
+        BlogTopic,
+        on_delete = models.SET_DEFAULT, 
+        blank = True,
+        default = ""
+        )
+
+    def __str__(self):
+        return self.title
