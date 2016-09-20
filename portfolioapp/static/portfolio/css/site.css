@@ -38,10 +38,15 @@ hr {
   border-bottom: none;
 }
 
-/* Make me beautiful */
+/* Make *me* beautiful */
 .about-image {
   height: 11rem;
   background-size: cover;
+}
+
+/* Decrease size of code to match Avenir */
+code {
+  font-size: 0.875rem;
 }
 
 /*
