@@ -1,14 +1,18 @@
 {% extends 'portfolio/partials/base_page.html' %}
 
 {% block page_content %}
-<section class="mw6 center pa3 ph4-ns">
   {% if posts %}
-  {% for post in posts %}
-  {{ post.get_markdown }}
-  <hr>
-  {% endfor %}
+  <section class="mw6 center bg-near-white pa3 ph4-ns">
+    <h1>Blog Posts</h1>
+    <ul class="lh-copy">
+      {% for post in posts %}
+      <li>
+        <a class="link dim" href="{% url 'blog_post' post.slug %}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
   {% else %}
-  <p class="tc">I'm working on it... <sup style="font-size: 0.5rem">I swear</sup></p>
+  <p class="tc">There are no blog posts to display.</p>
   {% endif %}
-</section>
 {% endblock %}

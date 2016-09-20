@@ -6,5 +6,6 @@ urlpatterns = [
     url(r'^experience/$', views.experience, name='experience'),
     url(r'^about/$', views.about, name='about'),
     url(r'^blog/$', views.blog, name='blog'),
+    url(r'^blog/(?P<post_slug>[\w-]+)/$', views.blog_post, name='blog_post'),
     url(r'^projects/(?P<project_id>[0-9]+)/$', views.project_detail, name='project_detail'),
 ]

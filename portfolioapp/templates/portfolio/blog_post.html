@@ -1,0 +1,27 @@
+{% extends 'portfolio/partials/base_page.html' %}
+
+{% block page_content %}
+  <section class="mw6 center pa3 ph4-ns">
+    <h1 class="f3 f2-ns mb3">{{ post.title }}</h1>
+    <h5 class="fw6 i mt3 mid-gray">{{ post.pub_date|date:"D M j, Y" }}</h5>
+    <div>{{ post.get_markdown }}</div>
+  </section>
+  <section class="mw7 center pa3">
+    {% if prev_post %}
+    <a href="{% url 'blog_post' prev_post.slug %}">
+      <div class="fr tr w-50 mw5-ns">
+        <h3 class="mb2 dark-gray">Older</h3>
+        {{ prev_post.title }}
+      </div>
+    </a>
+    {% endif %}
+    {% if next_post %}
+    <a href="{% url 'blog_post' next_post.slug %}">
+      <div class="fl tl w-50 mw5-ns">
+        <h3 class="mb2 dark-gray">Newer</h3>
+        {{ next_post.title }}
+      </div>
+    </a>
+    {% endif %}
+  </section>
+{% endblock %}

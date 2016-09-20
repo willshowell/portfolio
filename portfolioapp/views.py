@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404, render
-from .models import Project, Experience, About, BlogPost, BlogTopic
+from .models import Project, Experience, About, BlogPost
 
 def home(request):
     projects = Project.objects.all()
@@ -16,8 +16,21 @@ def about(request):
 def blog(request):
     # Get all the blog posts
     posts = BlogPost.objects.all().order_by('-pub_date') 
-
     return render(request, 'portfolio/blog.html', {'posts': posts})
+
+def blog_post(request, post_slug):
+    post = get_object_or_404(BlogPost, slug=post_slug)    
+    context = {'post': post}
+    try:
+        context['next_post'] = post.get_next_by_pub_date()
+    except:
+        pass
+    try:
+        context['prev_post'] = post.get_previous_by_pub_date()
+    except:
+        pass
+
+    return render(request, 'portfolio/blog_post.html', context)
 
 def project_detail(request, project_id):
     # Get this project data
