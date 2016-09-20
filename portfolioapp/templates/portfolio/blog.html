@@ -2,8 +2,11 @@
 
 {% block page_content %}
 <section class="mw6 center pa3 ph4-ns">
-  {% if blog_posts %}
-
+  {% if posts %}
+  {% for post in posts %}
+  {{ post.get_markdown }}
+  <hr>
+  {% endfor %}
   {% else %}
   <p class="tc">I'm working on it... <sup style="font-size: 0.5rem">I swear</sup></p>
   {% endif %}

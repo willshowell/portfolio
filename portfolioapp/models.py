@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.postgres.fields import ArrayField
 from ordered_model.models import OrderedModel
 from django.core.exceptions import ValidationError
+from django.utils.safestring import mark_safe
+from markdown import markdown
 
 def validate_only_one_instance(obj):
     model = obj.__class__
@@ -98,7 +100,6 @@ class BlogTopic(models.Model):
     topic = models.CharField(max_length=40)
 
     def __str__(self):
-
         return self.topic
 
 
@@ -111,6 +112,13 @@ class BlogPost(models.Model):
         blank = True,
         default = ""
         )
+    post = models.TextField()
+
+    def get_markdown(self):
+        post = mark_safe(markdown(self.post,
+            extensions = ['markdown.extensions.fenced_code']
+            ))
+        return post
 
     def __str__(self):
         return self.title
