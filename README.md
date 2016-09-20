@@ -51,3 +51,13 @@ Create an admin by running:
 * Edit the `admin.site.site_header` in `portfolio/urls.py` to your name.
 * Go to `localhost:8000/admin` (or whatever address:port) and log in using your superuser credentials.
 * Add new About, Experience, and Project items.
+
+## Notes
+As this project is still a work in progress, there are a few things that will need to be updated
+to match your personal use, as they aren't a part of the CMS.
+
+1. The [header and footer](portfolioapp/templates/portfolio/base_page.html) are hardcoded with my name
+2. The [500 error](portfolioapp/templates/500.html) page has a hardcoded social link
+3. The [about page](portoflioapp/templates/portfolio/about.html) has my social links hardcoded
+4. The [static images](portfolioapp/static/portfolio/images) are all specifically relevant to me and should
+be replaced. Ideally file upload and/or image CDNs would be used.
