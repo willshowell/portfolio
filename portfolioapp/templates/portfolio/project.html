@@ -48,6 +48,11 @@
       <hr class="b--black-10 w-60 mv4">
       <p class="measure lh-copy">{{ project.description|safe|linebreaksbr }}</p>
       {% endif %}
+
+      <!-- gallery -->
+      {% if images %}
+        {% include 'portfolio/partials/photoswipe.html' %}
+      {% endif %}
     </section>
 
 {% endblock %}
