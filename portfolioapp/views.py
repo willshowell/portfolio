@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404, render
+from django.utils import timezone
 from .models import Project, Experience, About, BlogPost
 
 def home(request):
@@ -14,8 +15,10 @@ def about(request):
     return render(request, 'portfolio/about.html', {'about': about })
 
 def blog(request):
-    # Get all the blog posts
-    posts = BlogPost.objects.all().order_by('-pub_date') 
+    # Get all the blog posts that have been published
+    posts = BlogPost.objects.filter(
+                pub_date__lte=timezone.now() 
+                ).order_by('-pub_date') 
     return render(request, 'portfolio/blog.html', {'posts': posts})
 
 def blog_post(request, post_slug):
