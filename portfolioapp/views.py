@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 from django.utils import timezone
-from .models import Project, Experience, About, BlogPost
+from .models import Project, Experience, About, BlogPost, Image
 
 def home(request):
     projects = Project.objects.all()
@@ -40,6 +40,7 @@ def project_detail(request, project_id):
     project = get_object_or_404(Project, pk=project_id)
     next_p = 0
     prev_p = 0
+    images = Image.objects.filter(project=project)
 
     # Try to retrieve data about the previous and next projects
     try:
@@ -52,7 +53,7 @@ def project_detail(request, project_id):
         pass
 
     # Generate the context
-    context = {'project': project}
+    context = {'project': project, 'images': images}
     if next_p:
         context['next'] = next_p
     if prev_p:

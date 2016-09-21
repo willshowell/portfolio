@@ -12,6 +12,8 @@ def validate_only_one_instance(obj):
         raise ValidationError("Can only create 1 {} instance".format(model.__name__))
 
 
+
+
 class Project(OrderedModel):
     title = models.CharField(
         max_length=100
@@ -51,6 +53,39 @@ class Project(OrderedModel):
 
     def __str__(self):
         return self.title
+
+
+class Image(models.Model):
+    image_url = models.CharField(
+        max_length=200
+        )
+    thumbnail_url = models.CharField(
+        max_length=200
+        )
+    alt_text = models.CharField(
+        max_length=200,
+        blank=True
+        )
+    priority = models.IntegerField(
+        default=0
+        )
+    width = models.IntegerField()
+    height = models.IntegerField()
+    project = models.ForeignKey(
+        Project, 
+        on_delete=models.CASCADE
+        )
+
+    def __str__(self):
+        return self.alt_text
+
+    def is_landscape(self):
+        return self.width > self.height
+        
+    class Meta:
+        # Higher priority shows up 
+        # in the list earlier
+        ordering = ['-priority']
 
 
 class Experience(models.Model):

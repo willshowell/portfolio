@@ -51,7 +51,7 @@
 
       <!-- gallery -->
       {% if images %}
-        {% include 'portfolio/partials/photoswipe.html' %}
+      {% include 'portfolio/partials/photoswipe.html' with images=images %}
       {% endif %}
     </section>
 

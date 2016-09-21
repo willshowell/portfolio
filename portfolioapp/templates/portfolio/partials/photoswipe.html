@@ -1,8 +1,9 @@
 <!-- Image Gallery -->
-<div class="image-gallery">
+<div class="image-gallery mt4 flex flex-row flex-wrap justify-center ">
+
   {% for image in images %}
-  <figure>
-    <a href="{{ image.image_url }}" data-size="{{ image.width }}x{{ image.height }}">
+  <figure class="ma0 mr3 mb3 {% if image.is_landscape %}landscape{% endif %}">
+    <a class="" href="{{ image.image_url }}" data-size="{{ image.width }}x{{ image.height }}">
       <img src="{{ image.thumbnail_url }}" alt="{{ image.alt_text }}" />
     </a>
   </figure>

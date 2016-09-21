@@ -114,3 +114,10 @@ code {
     //width: 40%;
   }
 }
+
+/*
+ * Image gallery
+ */
+.image-gallery figure {
+  width: 45%;
+}
