@@ -23,7 +23,19 @@ def blog(request):
 
 def blog_post(request, post_slug):
     post = get_object_or_404(BlogPost, slug=post_slug)    
-    context = {'post': post}
+    context = {}
+
+    # Add to the view_count if the user isn't logged in (aka me)
+    # If they are logged in (me), show the view count in the post
+    if not request.user.is_authenticated():
+        post.view_count += 1
+        post.save()
+    else:
+        context['view_count'] = post.view_count
+
+    context['post'] = post
+
+    print(post.view_count)
     try:
         context['next_post'] = post.get_next_by_pub_date()
     except:

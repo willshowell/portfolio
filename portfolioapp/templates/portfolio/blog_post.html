@@ -4,6 +4,9 @@
   <section class="pa3 ph4-ns">
     <div class="measure center">
       <h1 class="f3 f2-ns mb3">{{ post.title }}</h1>
+      {% if view_count != None %}
+      <small class="ma0">[{{ view_count }} view{{ view_count|pluralize }}]</small>
+      {% endif %}
       <h5 class="fw6 i mt3 mid-gray">{{ post.pub_date|date:"D M j, Y" }}</h5>
       <div class="lh-copy">{{ post.get_markdown }}</div>
     </div>

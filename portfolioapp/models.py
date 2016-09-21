@@ -139,6 +139,9 @@ class BlogPost(models.Model):
             max_length=200,
             unique=True
             )
+    view_count = models.IntegerField(
+            default=0
+            )
 
     def get_markdown(self):
         post = mark_safe(markdown(self.post,
