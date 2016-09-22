@@ -12,14 +12,17 @@
 	{% endblock %}
 	</main>
 
+  {% load link_active %}
+  {% with current_url=request.resolver_match.url_name %}
   <footer class="pv4 ph3 mt4">
     <div class="tc">
-      <a href="{% url 'home' %}" class="mid-gray link dim ph2">Projects</a><span class="black-10">|</span>
-      <a href="{% url 'about' %}" class="mid-gray link dim ph2">About</a><span class="black-10">|</span>
-      <a href="{% url 'experience' %}" class="mid-gray link dim ph2">Experience</a><span class="black-10">|</span>
-      <a href="{% url 'blog' %}" class="mid-gray link dim ph2">Blog</a>
+      <a href="{% url 'home' %}" class="mid-gray link dim ph2 {{ 'home'|bold:current_url }}">Projects</a><span class="black-10">|</span>
+      <a href="{% url 'about' %}" class="mid-gray link dim ph2 {{ 'about'|bold:current_url }}">About</a><span class="black-10">|</span>
+      <a href="{% url 'experience' %}" class="mid-gray link dim ph2 {{ 'experience'|bold:current_url }}">Experience</a><span class="black-10">|</span>
+      <a href="{% url 'blog' %}" class="mid-gray link dim ph2 {{ 'blog'|bold:current_url }}">Blog</a>
     </div>
     <a href="/" class="link dark-gray f6 fw1 db tc mt3 ">&copy; <span class="fw6">Will Howell 2016</span></a>
   </footer>
+  {% endwith %}
 
 {% endblock content %}
