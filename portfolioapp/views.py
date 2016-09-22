@@ -19,19 +19,30 @@ def blog(request):
     posts = BlogPost.objects.filter(
                 pub_date__lte=timezone.now() 
                 ).order_by('-pub_date') 
-    return render(request, 'portfolio/blog.html', {'posts': posts})
+    context = {'posts': posts}
+
+    # Add `user_auth` to context if the user is logged in
+    # Purpose is to show meta data such as view count
+    if request.user.is_authenticated():
+        context['user_auth'] = True
+    else:
+        context['user_auth'] = False
+
+    return render(request, 'portfolio/blog.html', context)
 
 def blog_post(request, post_slug):
     post = get_object_or_404(BlogPost, slug=post_slug)    
     context = {}
 
     # Add to the view_count if the user isn't logged in (aka me)
-    # If they are logged in (me), show the view count in the post
+    # Set the `user_auth` key depending on their authentication
+    # status
     if not request.user.is_authenticated():
         post.view_count += 1
         post.save()
+        context['user_auth'] = False
     else:
-        context['view_count'] = post.view_count
+        context['user_auth'] = True
 
     context['post'] = post
 
